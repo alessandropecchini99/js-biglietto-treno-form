@@ -1,4 +1,4 @@
-/* Chiedere numero di km che si vuole percorrere e l'età.
+/* Chiedere nome, numero di km che si vuole percorrere e l'età.
 Calcolare il prezzo totale del viaggio:
 prezzo biglietto (0,21€ al km) {0,21 * n/km}
 SE età < 18 sconto del 20%
