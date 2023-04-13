@@ -1,5 +1,6 @@
 body {
     background-color: rgb(110, 0, 0);
+    color: black;
 }
 
 
@@ -36,20 +37,21 @@ body {
 .ticket-div {
     box-shadow: -7px 7px 5px black;
     background-color: white;
-    height: 250px;
+    height: fit-content;
     width: 1000px;
     margin-inline: auto;
 }
 
+
+
+/* FORM */
+/* info */
 .all-info {
     display: flex;
     justify-content: space-between;
     margin-inline: 7em;
     margin-bottom: 2em;
 }
-
-
-/* FORM */
 .info {
     display: flex;
     flex-direction: column;
@@ -80,10 +82,41 @@ body {
     width: 220px;
 }
 
+/* button */
 #check {
     background-color: white;
     text-align: center;
     border: 2px solid rgb(110, 0, 0);
     border-radius: 20px;
     padding: 5px 10px;
+}
+
+
+
+/* BIGLIETTO */
+/* nome passegero */
+.nome-ticket {
+    background-color: grey;
+    flex: 0 0 40%;
+}
+
+.nome-ticket h3 {
+    margin: 0;
+}
+
+.info-ticket {
+    flex-basis: auto;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+/* table */
+tr th {
+    width: 3000px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+tr td {
+    padding-bottom: 10px;
 }
