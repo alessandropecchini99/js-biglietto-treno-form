@@ -2,7 +2,6 @@
 const check = document.querySelector('#check');
 
 
-
 // EVENTO
 check.addEventListener('click', function() {
 
@@ -35,7 +34,6 @@ check.addEventListener('click', function() {
 
     document.getElementById('txtname').innerHTML = user.value;
 });
-
 
 
 // ELEMENTI E CLASSI
