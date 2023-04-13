@@ -1,37 +1,47 @@
-/* Chiedere nome, numero di km che si vuole percorrere e l'età.
-Calcolare il prezzo totale del viaggio:
-prezzo biglietto (0,21€ al km) {0,21 * n/km}
-SE età < 18 sconto del 20%
-SE età >= 18  &&  età < 65 no sconto
-SE età >= 65 sconto del 40%
-Output con due decimali. */
+// BUTTON
+const check = document.querySelector('#check');
 
 
 
+// EVENTO
+check.addEventListener('click', function() {
 
-// VARIABILI
-const name = document.querySelector('#name');
-const km = document.querySelector('#km');
-const age = document.querySelector('#age');
+    // var
+    const user = document.querySelector('#name');
+    const km = document.querySelector('#km');
+    const age = document.querySelector('#age').value;
+
+    // calcolo prezzi
+    let normal = (km.value * 0.21);                // normale
+    const minore = (ticket - (ticket * 20 / 100)); // minore
+    const over = (ticket - (ticket * 40 / 100));   // over
+
+    // controllo sconto
+    if (age == 'maggiorenne') {
+        console.log(`maggiorenne`);
+        document.getElementById('prezzo').innerHTML = normal.toFixed(2) + '€';
+    }
+    if (age == 'minorenne') {
+        console.log(`minorenne`);
+        document.getElementById('prezzo').innerHTML = minore.toFixed(2) + '€';
+    } 
+    if (age == 'over') {
+        console.log(`over`);
+        document.getElementById('prezzo').innerHTML = over.toFixed(2) + '€';
+    }
+    if (isNaN(age)) {
+        document.getElementById('prezzo').innerHTML = 'Error';
+    }
+
+    document.getElementById('txtname').innerHTML = user.value;
+});
 
 
-// CALCOLO BIGLIETTO
-// calcolo prezzo per KM
-let ticket = 0.21 * km;
-console.log(ticket);
-document.getElementById(`Ticket`).innerHTML = (` ` + ticket.toFixed(2) + `€`);
 
-// controllo sconto
-if (age < 18) {
-    console.log(`minorenne`);
-    const totale = (ticket - (ticket * 20 / 100));
-    console.log(totale);
-    document.writeln(`<h2>` + `Prezzo scontato:` + ` ` + totale.toFixed(2) + `€` + `</h2>`);
-} else if (age >= 18 && age < 65) {
-    console.log(`adulto`);
-} else {
-    console.log(`anziano`);
-    const totale = (ticket - (ticket * 40 / 100));
-    console.log(totale);
-    document.writeln(`<h2>` + `Prezzo scontato:` + ` ` + totale.toFixed(2) + `€` + `</h2>`);
-}
+// ELEMENTI E CLASSI
+// macro card
+const form = document.getElementById('form');
+form.className = form.classList + 'form-div';
+
+const ticket = document.getElementById('ticket');
+ticket.className = ticket.classList + 'ticket-div';
